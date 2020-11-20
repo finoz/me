@@ -1,0 +1,83 @@
+body *{
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+	@extend %headings !optional;
+	font-size: $font-size-base;
+	font-weight: normal;
+	b {
+		color: $brand-secondary;
+	}
+}
+
+figure {
+	margin: 0;
+}
+
+ul,ol {
+	list-style-position: inside;
+}
+
+.page {
+	position: relative;
+	height: 100%;
+	&-content {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		.section {
+			padding: $font-size-base*1.5;
+			&-header {
+				padding: 0 $font-size-base*1.5;
+				margin: 0 auto;
+				max-width: map_get($breakpoints,md);
+				&-title {
+					@include h1;
+					position: relative;
+					text-align: center;
+					&::before {
+						position: relative;
+						z-index: 2;
+						content: "";
+						display: block;
+						width: $font-size-base*10;
+						height: $font-size-base*3.25;
+						background-color: $body-bg;
+						margin: $font-size-base*2.5 auto;
+						background-size: contain;
+						background-position: center;
+						background-repeat: no-repeat;
+					}
+					&::after {
+						content: "";
+						position: absolute;
+						z-index: 1;
+						top: $font-size-base*1.625;
+						margin-top: -1px;
+						left: 0;
+						width:100%;
+						height: 2px;
+						background-color: $brand-primary;
+					}
+					@include breakpoint-up(md){
+						&::after {
+							width: 50%;
+							left: 50%;
+							margin-left: -25%;
+						}
+					}
+				}
+				&-copy {
+					text-align: center;
+					@include copy;
+					color: $text-color;
+				}
+			}
+		}
+	}
+}

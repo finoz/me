@@ -1,0 +1,49 @@
+
+@mixin h1() {
+	font-size: $font-size-lg;
+	font-weight: 700;
+	margin-bottom: 1em;
+	line-height: $line-height-headings;
+	@include breakpoint-up(md) {
+		font-size: $font-size-huge;
+	}
+}
+@mixin h2() {
+	font-size: $font-size-lg;
+	margin-bottom: 1em;
+	font-weight: 700;
+	line-height: $line-height-headings;
+	@include breakpoint-up(sm) {
+		font-size: $font-size-xl;
+	}
+}
+@mixin h3() {
+	font-size: $font-size-md;
+	font-weight: 700;
+	margin-bottom: 1em;
+	line-height: $line-height-headings;
+}
+@mixin h4() {
+	font-size: $font-size-lg;
+	margin-bottom: 1em;
+	line-height: $line-height-headings;
+}
+
+@mixin note() {
+	font-size: $font-size-sm;
+}
+
+@mixin copy() {
+	font-size: $font-size-sm;
+	line-height: $line-height-base;
+	font-weight: 400;
+	p, & p {
+		margin-bottom: 1em;
+	}
+	b {
+		color: $brand-secondary;
+	}
+	@include breakpoint-up(md) {
+		font-size: $font-size-copy;
+	}
+}

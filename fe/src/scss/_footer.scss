@@ -1,0 +1,16 @@
+.page-footer {
+	position: relative;
+	z-index: 2;
+	font-size: $font-size-sm;
+	padding: $font-size-base*5 0;
+	text-align: center;
+	color: $brand-white;
+	background-color: $brand-primary;
+	background-image: linear-gradient($brand-primary,$brand-primary,darken($brand-primary,3%));
+	&-inner {
+		@include container(map-get($breakpoints, md),$font-size-base*1.5);
+	}
+	&-logo {
+		margin-bottom: $font-size-base*2.5;
+	}
+}

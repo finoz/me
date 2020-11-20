@@ -1,0 +1,92 @@
+.section#section-values{
+	padding: 0;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1;
+		height: $font-size-base*2;
+		background-color: darken($brand-primary,3%);
+	}
+	.section {
+		&-inner {
+			position: relative;
+			z-index: 2;
+			border-radius: $font-size-base*1.25;
+			background-color: $brand-secondary;
+			background-image: linear-gradient($brand-secondary,darken($brand-secondary,5%));
+			padding-top: $font-size-base*2.5;
+			padding-bottom: $font-size-base*1.25;
+			box-shadow: $shadow;
+			@include container(map-get($breakpoints, xl), $font-size-base*1.5);
+			@include breakpoint-up(md){
+				padding-bottom: $font-size-base*2.5;
+				margin-top: -$font-size-base;
+			}
+		}
+		&-title {
+			position: relative;
+			@include h1;
+			color: $brand-white;
+			text-align: center;
+			padding-bottom: $font-size-base*2;
+			margin-bottom: $font-size-base*2.5;
+			&::after {
+				position: absolute;
+				content: "";
+				width: 60%;
+				height: 3px;
+				bottom: 0;
+				left: 50%;
+				margin-left: -30%;
+				background-color: $brand-primary;
+			}
+			@include breakpoint-up(md){
+				&::after {
+					width: 20%;
+					margin-left: -10%;
+				}
+			}
+		}
+	}
+	.card {
+		background-color: $brand-white;
+		border-radius: $font-size-base*1.25;
+		padding: $font-size-base*1.25;
+		display: flex;
+		flex-direction: column;
+		@include breakpoint-up(md){
+			padding: $font-size-base*1.75;
+		}
+		&-title {
+			@include h3;
+			margin-top: 3em;
+		}
+		&-copy {
+			font-size: $font-size-sm;
+			line-height: $line-height-base;
+			font-weight: 400;
+			color: $text-color;
+			margin-top: auto;
+		}
+		&-list {
+			padding: 0 $font-size-base*1.25;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			grid-row-gap: $font-size-base*1.5;
+			@include breakpoint-up(md){
+				grid-template-columns: repeat(2,1fr);
+				grid-column-gap: $font-size-base*1.5;
+				grid-row-gap: $font-size-base*1.5;
+			}
+			@include breakpoint-up(lg){
+				grid-column-gap: $font-size-base*2.5;
+				grid-template-columns: repeat(4,1fr);
+			}
+		}
+	}
+}

@@ -1,0 +1,109 @@
+// COLORS
+/**
+* https://robots.thoughtbot.com/controlling-color-with-sass-color-functions
+*/
+
+/* brand colors*/
+$royal-blue-dark: #1E336D;
+$rhythm: #6E768E;
+$oxford-blue: #13224A;
+
+$bittersweet: #FF645B;
+$pale-pink: #FFD6D3;
+
+$cultured: #F7F9FB;
+
+$caribbean-green: #00c286;
+
+/**/
+$brand-black: #000000;
+$brand-white: #ffffff;
+
+$brand-primary: $royal-blue-dark;
+$brand-secondary: $bittersweet;
+
+$text-color: $rhythm;
+$text-color-muted: lighten($text-color,0.75);
+
+$body-color: $royal-blue-dark;
+$body-bg: $cultured;
+
+$link-color: $brand-primary;
+$link-hover-color: darken($link-color,5%);
+
+$link-decoration: none;
+$link-hover-decoration: underline;
+$link-focus-box-shadow: 0 0 0 transparent;
+
+// EASE + MISC
+$ease-out: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+$ease-in: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$shadow: 0 10px 20px rgba($brand-primary,0.2);
+$shadow-hover: 0 5px 10px rgba($brand-primary,0.15), 0 -5px -4px rgba($brand-primary,0.15);
+$border-radius: 10px;
+
+// FONTS
+$font-family-sans-serif: 'Karla';
+$font-family-serif: 'Vollkorn';
+$font-family-display: $font-family-sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+// FONTS & TYPO SIZES
+
+$font-size-base:              16px;
+
+$font-size-sm:                14px;
+$font-size-copy:              20px;
+$font-size-md:                24px;
+$font-size-lg:                34px;
+$font-size-xl:                48px;
+$font-size-xxl:               54px;
+$font-size-huge:              64px;
+
+/* calc of heading in mixin/types */
+
+$header-height-mobile: $font-size-base * 6;
+$header-height-desktop: $font-size-base * 10;
+
+$line-height-headings: 1.25;
+$line-height-base: 1.75;
+
+// LAYOUT BREAKPOINTS
+$breakpoints: (
+		xs: 36rem,//576
+		sm: 48rem,//768
+		md: 62rem,//1024
+		lg: 80rem,//1280
+		xl: 96rem, //1560
+);
+/*
+$breakpoint: map-get($breakpoints, sm);
+@include breakpoint-up(sm) {...}
+@include breakpoint-down(sm) {...}
+@include breakpoint-between(sm,md) {...}
+
+N.B.: In generale è da favorire un approccio mobile-first
+ */
+
+
+// INPUTS / FORMS
+
+$input-line-height: $font-size-base * 3.5;
+$input-color: $text-color;
+$label-color: $brand-primary;
+$input-placeholder-color: $text-color-muted;
+$input-bg: $body-bg;
+$input-border-color: rgba($brand-primary,0.3);
+$input-border-width: 1px;
+$input-border-radius: $border-radius;
+
+$input-muted-color: $text-color-muted;
+$input-muted-bg: transparent;
+
+$input-focus-color: darken($text-color,10%);
+$input-focus-bg: lighten($body-bg,50%);
+$input-focus-border-color: $text-color;
+$input-focus-box-shadow: 0 0 transparent;
+
+$form-feedback-valid-color: green;
+$form-feedback-invalid-color: red;

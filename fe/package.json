@@ -1,0 +1,37 @@
+{
+  "name": "fnz-base",
+  "version": "1.0.0",
+  "description": "ma'stuff",
+  "repository": {
+    "type": "git",
+    "url": "//ilfinoz.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack-dev-server",
+    "build:prod": "webpack -p"
+  },
+  "author": "@ilfinoz",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.4",
+    "url-loader": "^1.1.2",
+    "file-loader": "^4.2.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.2",
+    "is-webpack-dev-server": "^0.0.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0",
+    "jquery": "^3.3.1",
+    "gsap": "^3.4.0"
+  }
+}

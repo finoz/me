@@ -4,29 +4,25 @@
 */
 
 /* brand colors*/
-$royal-blue-dark: #1E336D;
-$rhythm: #6E768E;
-$oxford-blue: #13224A;
-
 $bittersweet: #FF645B;
-$pale-pink: #FFD6D3;
+$royal-blue-dark: #1E336D;
+$powder-blue: #A8DADC;
 
-$cultured: #F7F9FB;
-
-$caribbean-green: #00c286;
+$rich-black: #111111;
+$honeydew: #F1FAEE;
 
 /**/
-$brand-black: #000000;
-$brand-white: #ffffff;
+$brand-black: $rich-black;
+$brand-white: $honeydew;
 
-$brand-primary: $royal-blue-dark;
-$brand-secondary: $bittersweet;
+$brand-primary: $bittersweet;
+$brand-secondary: $royal-blue-dark;
 
-$text-color: $rhythm;
+$text-color: $brand-black;
 $text-color-muted: lighten($text-color,0.75);
 
-$body-color: $royal-blue-dark;
-$body-bg: $cultured;
+$body-color: $text-color;
+$body-bg: $brand-white;
 
 $link-color: $brand-primary;
 $link-hover-color: darken($link-color,5%);
@@ -44,8 +40,8 @@ $border-radius: 10px;
 
 // FONTS
 $font-family-sans-serif: 'Karla';
-$font-family-serif: 'Vollkorn';
-$font-family-display: $font-family-sans-serif;
+$font-family-serif: 'Prata';
+$font-family-display: $font-family-serif;
 $font-family-base: $font-family-sans-serif;
 
 // FONTS & TYPO SIZES
@@ -66,7 +62,7 @@ $header-height-mobile: $font-size-base * 6;
 $header-height-desktop: $font-size-base * 10;
 
 $line-height-headings: 1.25;
-$line-height-base: 1.75;
+$line-height-base: 1.5;
 
 // LAYOUT BREAKPOINTS
 $breakpoints: (

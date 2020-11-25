@@ -4,4 +4,4 @@ if(BOOL_DEVELMODE && isLocalhost()) {
 }else{
 	$dist_path = FE_URL;
 };	?>
-<script src='<?= $dist_path ?>dist/app.js' crossorigin='anonymous' async></script>
+<script src='<?= $dist_path ?>dist/app.js' async></script>

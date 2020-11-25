@@ -1,5 +1,6 @@
 import utils from './utils';
-import Animations from './animations';
+import home from './home';
+//import Animations from './animations';
 import '../scss/main.scss';
 
 class Setup {
@@ -7,7 +8,7 @@ class Setup {
 		this.log = 'Are you ready for this?';
 	};
 	init() {
-		let header = document.getElementsByClassName('site-header')[0];
+		let header = document.getElementsByClassName('header')[0];
 		utils.anchorHandler(header);
 
 		window.addEventListener('scroll', ()=> {
@@ -17,11 +18,18 @@ class Setup {
 		utils.toggleMenu();
 		utils.autocloseMenu();
 
-		let animations = new Animations();
-		animations.init();
+		this.switchPage();
+	}
+	
+	switchPage() {
+		switch (document.body.dataset.page) {
+			case 'home':
+				home.init();
+				break;
+			default:
+				//
+		}
 	}
 }
-//export {Setup as default};
-
 let setup = new Setup();
-//setup.init();
+setup.init();

@@ -1,4 +1,4 @@
-.site-header {
+.header {
 	position: fixed;
 	z-index: 9;
 	top: 0;
@@ -6,7 +6,6 @@
 	width: 100%;
 	height: $header-height-mobile;
 	display: flex;
-	color: $brand-white;
 	background-color: transparent;
 	transition: all 300ms $ease-out;
 	&-inner {
@@ -15,20 +14,20 @@
 		justify-content: space-between;
 		align-items: center;
 	}
-	.site-brand {
+	&-brand {
 		position: relative;
 		z-index: 4;
 		#logo {
 			position: relative;
 			width: auto;
 			height: $font-size-base*1.25;
-			color: $brand-white;
+			fill: $text-color;
 		}
 	}
-	.toggle-menu {
+	&-toggle-menu {
 		z-index: 4;
 	}
-	.site-navigation {
+	&-navigation {
 		position: fixed;
 		top: 0;
 		left: -100vw;
@@ -48,29 +47,35 @@
 				text-align: center;
 				a {
 					font-weight: bold;
-					color: $brand-secondary;
+					color: currentColor;
 					font-size: $font-size-md;
 				}
 			}
 		}
 	}
-	.main-nav-open &,
-	.prescrolled.main-nav-open &,
-	.scrolled.main-nav-open & {
-		.site-navigation {
+	.header-nav-open &,
+	.prescrolled.header-nav-open &,
+	.scrolled.header-nav-open & {
+		color: $body-bg;
+		.header-navigation {
 			left: 0;
 		}
-		color: $brand-secondary;
 		a {
-			color: $brand-secondary;
+			color: inherit;
 		}
 	}
 	.pre-scrolled & {
-		background-color: $brand-primary;
+		color: $body-bg;
+		background-color: $body-color;
 		box-shadow: $shadow;
 		height: $header-height-mobile*0.75;
 		a {
-			color: $brand-primary;
+			color: $body-bg;
+		}
+		.header-brand {
+			#logo {
+				fill: $body-bg;
+			}
 		}
 	}
 	.scrolled & {
@@ -79,21 +84,21 @@
 }
 
 @include breakpoint-up(md) {
-	.site-header {
+	.header {
 		height: $header-height-desktop;
 		background-color: transparent;
 		&-inner {
 			padding: 0 $font-size-base;
 		}
-		.site-brand {
+		&-brand {
 			#logo {
 				height: $font-size-base * 2;
 			}
 		}
-		.toggle-menu {
+		&-toggle-menu {
 			display: none;
 		}
-		.site-navigation {
+		&-navigation {
 			position: relative;
 			top: auto;
 			left: auto;

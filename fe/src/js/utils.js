@@ -149,28 +149,29 @@ const utils = {
 	 * il parametro classe è da passare senza il punto
 	 * @param triggerClass
 	 */
-	toggleMenu: function(triggerClass='toggle-menu'){
+	toggleMenu: function(triggerClass='header-toggle-menu'){
 		let trigger = document.getElementsByClassName(triggerClass)[0];
 		if(typeof(trigger) !== 'undefined') {
 			trigger.addEventListener('click', function(e){
 				this.classList.toggle('is-active');
-				document.body.classList.toggle('main-nav-open');
+				document.body.classList.toggle('header-nav-open');
 			});
 		}
 	},
 
-	autocloseMenu: function(menuClass='site-navigation', triggerClass='toggle-menu'){
-		//is-active - main-nav-open
-		var menu = document.getElementsByClassName(menuClass)[0];
-		var menuItems = [...menu.getElementsByTagName('a')];
-		var toggle = document.getElementsByClassName(triggerClass)[0];
-		menuItems.forEach((item,index)=>{
-			item.addEventListener('click',()=>{
-				if(toggle.classList.contains('is-active')){
-					toggle.click();
-				}
-			})
-		});
+	autocloseMenu: function(menuClass='header-navigation', triggerClass='header-toggle-menu'){
+		const menu = document.getElementsByClassName(menuClass)[0];
+		const toggle = document.getElementsByClassName(triggerClass)[0];
+		if(menu && toggle) {
+			let menuItems = [...menu.getElementsByTagName('a')];
+			menuItems.forEach((item,index)=>{
+				item.addEventListener('click',()=>{
+					if(toggle.classList.contains('is-active')){
+						toggle.click();
+					}
+				})
+			});
+		}
 	},
 
 	/**

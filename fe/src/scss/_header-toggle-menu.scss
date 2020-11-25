@@ -1,7 +1,7 @@
 $toggle-size: 28px;
 $toggle-thikness: 2px;
 $toggle-mode: cross; //arrow, cross
-.toggle-menu {
+.header-toggle-menu {
 	position: relative;
 	cursor: pointer;
 	color: inherit;
@@ -47,7 +47,7 @@ $toggle-mode: cross; //arrow, cross
 				//width: 80%;
 				left: 16%;
 			}
-			.toggle-menu-inner {
+			.header-toggle-menu-inner {
 				&::before {
 					content: '';
 					width: 50%;
@@ -67,7 +67,7 @@ $toggle-mode: cross; //arrow, cross
 				width: 0;
 				opacity: 0;
 			}
-			.toggle-menu-inner {
+			.header-toggle-menu-inner {
 				&::before {
 					content: '';
 					top: 50%;

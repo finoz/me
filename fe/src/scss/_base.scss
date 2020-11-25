@@ -1,0 +1,36 @@
+body {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	font-weight: lighter;
+	line-height: $line-height-base;
+	color: $body-color;
+	text-align: left;
+	background-color: $body-bg;
+	*{
+		box-sizing: border-box;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+	@extend %headings !optional;
+	font-size: $font-size-base;
+	font-weight: normal;
+	b {
+		color: $brand-secondary;
+	}
+}
+
+figure {
+	margin: 0;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+ul,ol {
+	list-style-position: inside;
+}

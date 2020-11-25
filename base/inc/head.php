@@ -1,11 +1,9 @@
 <head>
-    <?php
-    if(BOOL_DEVELMODE && isLocalhost()) {
+    <?php if (BOOL_DEVELMODE && isLocalhost()) {
 		$dist_path = 'http://localhost:8080/';
-	}else{
+	} else {
 		$dist_path = FE_URL;
-	};
-	?>
+	} ?>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title><?= SITE_META_TITLE; ?></title>

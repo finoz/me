@@ -3,12 +3,15 @@
 * nel caso di necessità di riferimento a ocme strutturano le cose:
 * https://github.com/twbs/bootstrap/tree/v4-dev/scss
 */
-
 @import "~normalize.css/normalize.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,700;1,300;1,700&family=Prata&display=swap');
 @import "variables";
 
 @import "mixins/mixins";
 @import "reboot";
+@import "base";
+
 @import "form";
 
 @import "header";
@@ -16,3 +19,4 @@
 @import "footer";
 
 @import "layout";
+@import "page-home";

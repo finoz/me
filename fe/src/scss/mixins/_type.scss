@@ -1,32 +1,34 @@
-
-@mixin h1() {
-	font-size: $font-size-lg;
-	font-weight: 700;
-	margin-bottom: 1em;
+@mixin heading($level) {
+	font-family: $font-family-display;
+	margin-top: 0.1em;
+	margin-bottom: 0.5em;
 	line-height: $line-height-headings;
-	@include breakpoint-up(md) {
-		font-size: $font-size-huge;
-	}
-}
-@mixin h2() {
-	font-size: $font-size-lg;
-	margin-bottom: 1em;
-	font-weight: 700;
-	line-height: $line-height-headings;
-	@include breakpoint-up(sm) {
+	@if ($level == 1) {
 		font-size: $font-size-xl;
+		@include breakpoint-up(md) {
+			font-size: $font-size-huge;
+		}
 	}
-}
-@mixin h3() {
-	font-size: $font-size-md;
-	font-weight: 700;
-	margin-bottom: 1em;
-	line-height: $line-height-headings;
-}
-@mixin h4() {
-	font-size: $font-size-lg;
-	margin-bottom: 1em;
-	line-height: $line-height-headings;
+	@else if ($level == 2) {
+		font-size: $font-size-lg;
+		@include breakpoint-up(sm) {
+			font-size: $font-size-xxl;
+		}
+	}
+	@else if ($level == 3) {
+		font-size: $font-size-md;
+		@include breakpoint-up(sm) {
+			font-size: $font-size-xl;
+		}
+	}
+	@else if ($level == 4) {
+		font-family: $font-family-base;
+		font-weight: bold;
+		font-size: $font-size-md;
+		@include breakpoint-up(sm) {
+			font-size: $font-size-lg;
+		}
+	}
 }
 
 @mixin note() {

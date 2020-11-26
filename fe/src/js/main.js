@@ -8,8 +8,7 @@ class Setup {
 		this.log = 'Are you ready for this?';
 	};
 	init() {
-		let header = document.getElementsByClassName('header')[0];
-		utils.anchorHandler(header);
+		utils.anchorHandler('.header');
 
 		window.addEventListener('scroll', ()=> {
 			utils.scrollHandler(header);

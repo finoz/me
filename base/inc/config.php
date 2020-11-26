@@ -20,4 +20,4 @@ define('FE_URL', '../fe/');
 define('SITE_LANG',"IT");
 
 define('SITE_META_TITLE','ilfinoz');
-define('SITE_META_DESCRIPTION','cose');
+define('SITE_META_DESCRIPTION','Faccio cose');

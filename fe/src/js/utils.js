@@ -83,19 +83,32 @@ const utils = {
 
 	/**
 	 * anchorHandler: scroll animato su href se chiama un ID.
-	 * ATTENZIONE. non è plain js, usa jQuery.
 	 */
-	anchorHandler: function(offsetElement = null) {
-		$('a[href^=\\#]').on('click', function(event){
-			let offset = offsetElement != null ? offsetElement.clientHeight : '';
-			event.preventDefault();
-			console.log($(this.hash));
-			if($(this.hash).length > 0){
-				$('html,body').animate({scrollTop:($(this.hash).offset().top - offset)}, 500);
-			} else {
-				//console.log("no anchor with #"+this.hash);
-			}
-		});
+	anchorHandler: function(offsetSelector = null) {
+		let anchorLinks = document.querySelectorAll('a[href^=\\#]');
+		let offset = 0;
+		if(offsetSelector) {
+			let offsetElement = document.querySelector(offsetSelector);
+			offset = offsetElement != null ? offsetElement.offsetHeight : 0;
+		}
+		anchorLinks.forEach((link) => {
+			link.addEventListener('click', (e) => {
+				if (e.currentTarget.hash !== "") {
+					let target = document.querySelector(e.currentTarget.hash);
+					let targetPosition = target.getBoundingClientRect().top;
+					targetPosition += offset;
+					if (targetPosition > 0) {
+						targetPosition += window.scrollY;
+					}
+					window.scrollTo({
+						top: targetPosition,
+						behavior: 'smooth'
+					});
+				}
+			}, {
+				passive: true
+			})
+		})
 	},
 
 	/**

@@ -11,7 +11,7 @@ class Setup {
 		utils.anchorHandler('.header');
 
 		window.addEventListener('scroll', ()=> {
-			utils.scrollHandler(header);
+			utils.scrollHandler(document.querySelector('.header'));
 		});
 
 		utils.toggleMenu();

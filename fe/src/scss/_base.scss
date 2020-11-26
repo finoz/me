@@ -1,9 +1,9 @@
 :root {
-	--primary-color: $bittersweet;
-	--secondary-color: $royal-blue-dark;
-	--tertiary-color: $powder-blue;
-	--black-color: $rich-black;
-	--white-color: $honeydew;
+	--primary-color: #{$bittersweet};
+	--secondary-color: #{$royal-blue-dark};
+	--tertiary-color: #{$powder-blue};
+	--black-color: #{$rich-black};
+	--white-color: #{$honeydew};
 }
 body {
 	font-family: $font-family-base;

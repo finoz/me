@@ -1,11 +1,18 @@
+:root {
+	--primary-color: $bittersweet;
+	--secondary-color: $royal-blue-dark;
+	--tertiary-color: $powder-blue;
+	--black-color: $rich-black;
+	--white-color: $honeydew;
+}
 body {
 	font-family: $font-family-base;
 	font-size: $font-size-base;
 	font-weight: lighter;
 	line-height: $line-height-base;
-	color: $body-color;
 	text-align: left;
-	background-color: $body-bg;
+	color: var(--black-color);
+	background-color: var(--white-color);
 	*{
 		box-sizing: border-box;
 		-webkit-font-smoothing: antialiased;
@@ -18,9 +25,6 @@ h4, h5, h6 {
 	@extend %headings !optional;
 	font-size: $font-size-base;
 	font-weight: normal;
-	b {
-		color: $brand-secondary;
-	}
 }
 
 figure {

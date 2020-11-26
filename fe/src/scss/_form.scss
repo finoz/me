@@ -177,8 +177,8 @@ textarea.form-control {
 		border: 1px solid $input-focus-border-color;
 	}
 	.form-control:checked + .pseudo-input {
-		background-color: $brand-primary;
-		border-color: $brand-primary;
+		background-color: var(--primary-color);
+		border-color: var(--primary-color);
 		&::before {
 			content: "";
 			z-index: 2;
@@ -187,8 +187,8 @@ textarea.form-control {
 			left: 30%;
 			width: 40%;
 			height: 80%;
-			border-bottom: 2px solid rgba($brand-white, .8);
-			border-right: 2px solid rgba($brand-white, .8);
+			border-bottom: 2px solid rgba(var(--white-color), .8);
+			border-right: 2px solid rgba(var(--white-color), .8);
 			transform: rotate(45deg);
 			transform-origin: center;
 		}
@@ -203,7 +203,7 @@ textarea.form-control {
 			height: 50%;
 			top: 50%;
 			left: 50%;
-			background-color: rgba($brand-white, .8);
+			background-color: rgba(var(--black-color), .8);
 			border: 0 solid;
 			border-radius: 50%;
 			transform: translate(-50%,-50%);
@@ -213,7 +213,7 @@ textarea.form-control {
 	.form-label {
 		display: inline-block;
 		font-weight: normal;
-		color: $text-color;
+		color: var(--black-color);
 		text-transform: none;
 		margin-bottom: 0; // Override default `<label>` bottom margin
 	}

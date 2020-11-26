@@ -4,9 +4,12 @@
 */
 
 /** TODO
-* manage color variables as css vars
+* verificare dove è giusto mantenere le css-vars e dove è meglio riportarsi le sass-vars
+* fare un mixin per poter agire con l'alfa sulle css-vars (trasformare hex in rgb, per poi inserirlo in un rgba)
+* rivedere nominazione parametri buttons
+* giro completo
+*
 */
-
 
 /* brand colors*/
 $bittersweet: #FF645B;
@@ -17,20 +20,6 @@ $rich-black: #111111;
 $honeydew: #F1FAEE;
 
 /**/
-$brand-black: $rich-black;
-$brand-white: $honeydew;
-
-$brand-primary: $bittersweet;
-$brand-secondary: $royal-blue-dark;
-
-$text-color: $brand-black;
-$text-color-muted: lighten($text-color,0.75);
-
-$body-color: $text-color;
-$body-bg: $brand-white;
-
-$link-color: $brand-primary;
-$link-hover-color: darken($link-color,5%);
 
 $link-decoration: none;
 $link-hover-decoration: underline;
@@ -39,8 +28,8 @@ $link-focus-box-shadow: 0 0 0 transparent;
 // EASE + MISC
 $ease-out: cubic-bezier(0.770, 0.000, 0.175, 1.000);
 $ease-in: cubic-bezier(0.95, 0.05, 0.795, 0.035);
-$shadow: 0 10px 20px rgba($brand-primary,0.2);
-$shadow-hover: 0 5px 10px rgba($brand-primary,0.15), 0 -5px -4px rgba($brand-primary,0.15);
+$shadow: 0 10px 20px rgba($rich-black,0.2);
+$shadow-hover: 0 5px 10px rgba($rich-black,0.15), 0 -5px -4px rgba($rich-black,0.15);
 $border-radius: 10px;
 
 // FONTS
@@ -90,20 +79,20 @@ N.B.: In generale è da favorire un approccio mobile-first
 // INPUTS / FORMS
 
 $input-line-height: $font-size-base * 3.5;
-$input-color: $text-color;
-$label-color: $brand-primary;
-$input-placeholder-color: $text-color-muted;
-$input-bg: $body-bg;
-$input-border-color: rgba($brand-primary,0.3);
+$input-color: $rich-black;
+$label-color: $rich-black;
+$input-placeholder-color: $rich-black;
+$input-bg: $honeydew;
+$input-border-color: rgba($rich-black,0.3);
 $input-border-width: 1px;
 $input-border-radius: $border-radius;
 
-$input-muted-color: $text-color-muted;
+$input-muted-color: $rich-black;
 $input-muted-bg: transparent;
 
-$input-focus-color: darken($text-color,10%);
-$input-focus-bg: lighten($body-bg,50%);
-$input-focus-border-color: $text-color;
+$input-focus-color: darken($rich-black,10%);
+$input-focus-bg: lighten($honeydew,50%);
+$input-focus-border-color: $rich-black;
 $input-focus-box-shadow: 0 0 transparent;
 
 $form-feedback-valid-color: green;

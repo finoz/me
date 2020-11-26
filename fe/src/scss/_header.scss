@@ -21,7 +21,7 @@
 			position: relative;
 			width: auto;
 			height: $font-size-base*1.25;
-			fill: $text-color;
+			fill: var(--black-color);
 		}
 	}
 	&-toggle-menu {
@@ -34,7 +34,7 @@
 		width: 100vw;
 		height: 100vh;
 		padding: $font-size-base;
-		background-color: $brand-primary;
+		background-color: var(--primary-color);
 		z-index: 3;
 		transition: left 300ms ease;
 		display: flex;
@@ -56,7 +56,7 @@
 	.header-nav-open &,
 	.prescrolled.header-nav-open &,
 	.scrolled.header-nav-open & {
-		color: $body-bg;
+		color: var(--white-color);
 		.header-navigation {
 			left: 0;
 		}
@@ -65,16 +65,16 @@
 		}
 	}
 	.pre-scrolled & {
-		color: $body-bg;
-		background-color: $body-color;
+		color: var(--white-color);
+		background-color: var(--black-color);
 		box-shadow: $shadow;
 		height: $header-height-mobile*0.75;
 		a {
-			color: $body-bg;
+			color: var(--white-color);
 		}
 		.header-brand {
 			#logo {
-				fill: $body-bg;
+				fill: var(--white-color);
 			}
 		}
 	}
@@ -120,7 +120,7 @@
 					}
 					&.page-navigation-highlight {
 						a {
-							@include btn-secondary($color: $brand-secondary);
+							@include btn-secondary();
 							text-transform: none;
 						}
 					}

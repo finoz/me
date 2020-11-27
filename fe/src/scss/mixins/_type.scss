@@ -42,9 +42,6 @@
 	p, & p {
 		margin-bottom: 1em;
 	}
-	b {
-		color: $brand-secondary;
-	}
 	@include breakpoint-up(md) {
 		font-size: $font-size-copy;
 	}

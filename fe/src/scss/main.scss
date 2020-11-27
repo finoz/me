@@ -9,14 +9,15 @@
 @import "variables";
 
 @import "mixins/mixins";
-@import "reboot";
+@import "base-reboot";
 @import "base";
+@import "base-form";
 
-@import "form";
+@import "micro-header-toggle-menu";
 
-@import "header";
-@import "header-toggle-menu";
-@import "footer";
+@import "block-header";
+@import "block-footer";
+@import "block-hero";
 
-@import "layout";
-@import "page-home";
+@import "site-layout";
+@import "site-home";

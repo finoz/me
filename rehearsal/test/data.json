@@ -1,0 +1,496 @@
+{
+    "main": {
+        "countries": {
+            "AT": {
+                "displayName": "AT",
+                "countryCode": "AT",
+                "languages": [
+                    {
+                        "localID": "en_AT",
+                        "displayCountry": "Austria",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_DEAT",
+                "countryPosition": 7
+            },
+            "BE": {
+                "displayName": "BE",
+                "countryCode": "BE",
+                "languages": [
+                    {
+                        "localID": "en_BE",
+                        "displayCountry": "Belgium",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    },
+                    {
+                        "localID": "de_BE",
+                        "displayCountry": "Belgien",
+                        "language": "de",
+                        "displayLanguage": "Deutsch"
+                    },
+                    {
+                        "localID": "fr_BE",
+                        "displayCountry": "Belgique",
+                        "language": "fr",
+                        "displayLanguage": "Français"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 8
+            },
+            "CH": {
+                "displayName": "Svizzera",
+                "countryCode": "CH",
+                "languages": [
+                    {
+                        "localID": "en_CH",
+                        "displayCountry": "Switzerland",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    },
+                    {
+                        "localID": "fr_CH",
+                        "displayCountry": "Suisse",
+                        "language": "fr",
+                        "displayLanguage": "Français"
+                    },
+                    {
+                        "localID": "it_CH",
+                        "displayCountry": "Svizzera",
+                        "language": "it",
+                        "displayLanguage": "Italiano"
+                    }
+                ],
+                "currencyCode": "CHF",
+                "currencyName": "Swiss Franc",
+                "currencySymbol": "CHF",
+                "siteID": "WR_CH",
+                "countryPosition": 10
+            },
+            "DE": {
+                "displayName": "DE",
+                "countryCode": "DE",
+                "languages": [
+                    {
+                        "localID": "de_DE",
+                        "displayCountry": "Deutschland",
+                        "language": "de",
+                        "displayLanguage": "Deutsch"
+                    },
+                    {
+                        "localID": "en_DE",
+                        "displayCountry": "Germany",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_DEAT",
+                "countryPosition": 2
+            },
+            "ES": {
+                "displayName": "ES",
+                "countryCode": "ES",
+                "languages": [
+                    {
+                        "localID": "en_ES",
+                        "displayCountry": "Spain",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ES",
+                "countryPosition": 6
+            },
+            "FR": {
+                "displayName": "FR",
+                "countryCode": "FR",
+                "languages": [
+                    {
+                        "localID": "en_FR",
+                        "displayCountry": "France",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_FR",
+                "countryPosition": 5
+            },
+            "GB": {
+                "displayName": "GB",
+                "countryCode": "GB",
+                "languages": [],
+                "currencyCode": "GBP",
+                "currencyName": "Pound Sterling",
+                "currencySymbol": "£",
+                "siteID": "WR_UK",
+                "countryPosition": 4
+            },
+            "IT": {
+                "displayName": "Italia",
+                "countryCode": "IT",
+                "languages": [
+                    {
+                        "localID": "en_IT",
+                        "displayCountry": "Italy",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_IT",
+                "countryPosition": 1
+            },
+            "NL": {
+                "displayName": "NL",
+                "countryCode": "NL",
+                "languages": [
+                    {
+                        "localID": "en_NL",
+                        "displayCountry": "Netherlands",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_NL",
+                "countryPosition": 3
+            },
+            "SE": {
+                "displayName": "SE",
+                "countryCode": "SE",
+                "languages": [
+                    {
+                        "localID": "en_SE",
+                        "displayCountry": "Sweden",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 9
+            }
+        },
+        "groupPosition": 1,
+        "ignoreCountryPosition": false
+    },
+    "other": {
+        "countries": {
+            "BG": {
+                "displayName": "BG",
+                "countryCode": "BG",
+                "languages": [
+                    {
+                        "localID": "en_BG",
+                        "displayCountry": "Bulgaria",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 26
+            },
+            "CZ": {
+                "displayName": "CZ",
+                "countryCode": "CZ",
+                "languages": [
+                    {
+                        "localID": "en_CZ",
+                        "displayCountry": "Czech Republic",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 18
+            },
+            "DK": {
+                "displayName": "DK",
+                "countryCode": "DK",
+                "languages": [
+                    {
+                        "localID": "en_DK",
+                        "displayCountry": "Denmark",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 11
+            },
+            "EE": {
+                "displayName": "EE",
+                "countryCode": "EE",
+                "languages": [
+                    {
+                        "localID": "en_EE",
+                        "displayCountry": "Estonia",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 21
+            },
+            "FI": {
+                "displayName": "FI",
+                "countryCode": "FI",
+                "languages": [
+                    {
+                        "localID": "en_FI",
+                        "displayCountry": "Finland",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 16
+            },
+            "GR": {
+                "displayName": "GR",
+                "countryCode": "GR",
+                "languages": [
+                    {
+                        "localID": "en_GR",
+                        "displayCountry": "Greece",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 15
+            },
+            "HR": {
+                "displayName": "HR",
+                "countryCode": "HR",
+                "languages": [
+                    {
+                        "localID": "en_HR",
+                        "displayCountry": "Croatia",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 20
+            },
+            "HU": {
+                "displayName": "HU",
+                "countryCode": "HU",
+                "languages": [
+                    {
+                        "localID": "en_HU",
+                        "displayCountry": "Hungary",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 19
+            },
+            "IE": {
+                "displayName": "IE",
+                "countryCode": "IE",
+                "languages": [
+                    {
+                        "localID": "en_IE",
+                        "displayCountry": "Ireland",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 13
+            },
+            "LI": {
+                "displayName": "LI",
+                "countryCode": "LI",
+                "languages": [
+                    {
+                        "localID": "de_LI",
+                        "displayCountry": "Liechtenstein",
+                        "language": "de",
+                        "displayLanguage": "Deutsch"
+                    }
+                ],
+                "currencyCode": "CHF",
+                "currencyName": "Swiss Franc",
+                "currencySymbol": "CHF",
+                "siteID": "WR_ROE",
+                "countryPosition": 24
+            },
+            "LT": {
+                "displayName": "LT",
+                "countryCode": "LT",
+                "languages": [
+                    {
+                        "localID": "en_LT",
+                        "displayCountry": "Lithuania",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 22
+            },
+            "LU": {
+                "displayName": "LU",
+                "countryCode": "LU",
+                "languages": [
+                    {
+                        "localID": "en_LU",
+                        "displayCountry": "Luxembourg",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 12
+            },
+            "LV": {
+                "displayName": "LV",
+                "countryCode": "LV",
+                "languages": [
+                    {
+                        "localID": "en_LV",
+                        "displayCountry": "Latvia",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 23
+            },
+            "PL": {
+                "displayName": "PL",
+                "countryCode": "PL",
+                "languages": [
+                    {
+                        "localID": "en_PL",
+                        "displayCountry": "Poland",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 8
+            },
+            "PT": {
+                "displayName": "PT",
+                "countryCode": "PT",
+                "languages": [
+                    {
+                        "localID": "en_PT",
+                        "displayCountry": "Portugal",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 14
+            },
+            "RO": {
+                "displayName": "RO",
+                "countryCode": "RO",
+                "languages": [
+                    {
+                        "localID": "en_RO",
+                        "displayCountry": "Romania",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 25
+            },
+            "SK": {
+                "displayName": "SK",
+                "countryCode": "SK",
+                "languages": [
+                    {
+                        "localID": "en_SK",
+                        "displayCountry": "Slovakia",
+                        "language": "en",
+                        "displayLanguage": "English"
+                    }
+                ],
+                "currencyCode": "EUR",
+                "currencyName": "Euro",
+                "currencySymbol": "€",
+                "siteID": "WR_ROE",
+                "countryPosition": 17
+            }
+        },
+        "groupPosition": 2,
+        "ignoreCountryPosition": true
+    }
+}

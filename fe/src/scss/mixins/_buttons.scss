@@ -1,5 +1,5 @@
 @mixin btn() {
-	color: var(--black-color);
+	color: $color-black;
 	background-color: transparent;
 	display: inline-block;
 	padding: 0;
@@ -19,7 +19,7 @@
 	}
 }
 
-@mixin btn-primary($txt: $honeydew, $bg: $bittersweet) {
+@mixin btn-primary($txt: $color-white, $bg: $color-primary) {
 	@include btn();
 	position: relative;
 	width: auto;
@@ -46,7 +46,7 @@
 
 }
 
-@mixin btn-secondary($color: var(--black-color)) {
+@mixin btn-secondary($color: $color-text) {
 	@include btn-primary();
 	color: $color;
 	border-color: $color;
@@ -59,7 +59,7 @@
 	}
 }
 
-@mixin btn-light($color: var(--black-color)) {
+@mixin btn-light($color: $color-text) {
 	@include btn-primary();
 	background: none;
 	border-color: transparent;

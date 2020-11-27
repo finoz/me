@@ -1,0 +1,82 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>#01 | DrumPad</title>
+	</head>
+	<body>
+		<main>
+			<ul class="keys">
+				<li data-key="65">a</li>
+				<li data-key="83">s</li>
+				<li data-key="68">d</li>
+				<li data-key="70">f</li>
+			</ul>
+		</main>
+		<audio data-key="65" src="sounds/la_lo.mp3"></audio>
+		<audio data-key="83" src="sounds/mi_lo.mp3"></audio>
+		<audio data-key="68" src="sounds/la_hi.mp3"></audio>
+		<audio data-key="70" src="sounds/fa_hi.mp3"></audio>
+	</body>
+	<style>
+		.keys {
+			list-style: none;
+			display: flex;
+		}
+		.keys li {
+			margin: 0 0.2rem;
+			width: 2rem;
+			height: 2rem;
+			border: 1px solid currentColor;
+			border-radius: 4px;
+			box-shadow:
+					2px 2px 0 rgba(0,0,0,0.3)
+					-2px -2px 10px rgba(0,0,0,0.15);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 100ms;
+		}
+		.keys li.playing {
+			transform: scale(1.1);
+			color: white;
+			background: darkred;
+			border-color: darkred;
+		}
+	</style>
+	<script>
+		const activeClass = 'playing';
+
+		window.addEventListener('keydown',(e)=>{
+			let key = document.querySelector(`li[data-key="${e.keyCode}"]`);;
+			let audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+			if(audio){
+				this.playSound(audio);
+				this.addTransitionClass(key);
+			}
+			this.listenTransitionEnd();
+		});
+
+		function playSound(audio) {
+			audio.currentTime = 0;
+			audio.play();
+		}
+
+		function addTransitionClass(el){
+			el.classList.add(activeClass);
+		}
+		function removeTransitionClass(e){
+			if(e.propertyName == 'transform'){
+				e.target.classList.remove(activeClass);
+			}
+		}
+
+		function listenTransitionEnd() {
+			const keyboard = document.getElementsByClassName('keys')[0];
+			const keys = keyboard.querySelectorAll('li[data-key]');
+			keys.forEach(key => {
+				key.addEventListener('transitionend', this.removeTransitionClass);
+			});
+		}
+	</script>
+	</html>

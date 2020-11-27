@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax type</title>
+</head>
+<body>
+	<main>
+		<form action="">
+			<input id="search" type="text">
+		</form>
+		<ul class="list"></ul>
+	</main>
+</body>
+<style>
+	.hl {
+		background-color: yellow;
+	}
+</style>
+<script>
+	const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+	/**
+	 * other json API:
+	 * https://pokeapi.co/api/v2/gender/3/
+	 * https://funtranslations.com/api/
+	 * https://www.affirmations.dev/
+	 * https://http.cat/
+	 * https://api.nasa.gov/
+	 * https://deckofcardsapi.com/
+	 * https://api.adviceslip.com/advice
+	 * https://developer.spotify.com/documentation/web-api/
+	 * https://developer.marvel.com/
+	 * https://imgflip.com/api
+	 * https://imgflip.com/api
+	 * https://placegoat.com/
+	 * https://swapi.dev/
+	 * https://dog.ceo/
+	 * https://fungenerators.com/api/facts/
+	* */
+	const cities = [];
+	let input = document.getElementById('search');
+
+	fetch(endpoint)
+			.then((blob) => blob.json())
+			.then((data) => cities.push(...data));
+
+	input.addEventListener('keyup', displayMatches);
+
+	function findMatches(stringToMatch) {
+		const regex = new RegExp(stringToMatch, 'gi');
+		return cities.filter((cityData) => {
+			return cityData.city.match(regex) || cityData.state.match(regex);
+		})
+	}
+
+	function displayMatches() {
+		let listWrapper = document.querySelector('.list');
+		let filteredData = findMatches(input.value);
+		const regex = new RegExp(input.value, 'gi');
+		let filteredHtml = filteredData.map((cityData) => {
+			console.table(cityData);
+			const cityName = cityData.city.replace(regex, () => {
+				return `<span class="hl">${this.value}</span>`;
+			});
+			const stateName = cityData.state.replace(regex, () => {
+				return `<span class="hl">${this.value}</span>`;
+			})
+			return `<li>${cityName}, ${stateName} | ${cityData.population}</li>`
+		}).join('');
+		listWrapper.innerHTML = filteredHtml;
+	}
+
+</script>
+</html>

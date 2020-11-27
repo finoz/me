@@ -1,9 +1,7 @@
 :root {
-	--primary-color: #{$bittersweet};
-	--secondary-color: #{$royal-blue-dark};
-	--tertiary-color: #{$powder-blue};
-	--black-color: #{$rich-black};
-	--white-color: #{$honeydew};
+	--color-primary: #{$color-primary};
+	--color-secondary: #{$color-secondary};
+	--color-tertiary: #{$color-tertiary};
 }
 body {
 	font-family: $font-family-base;
@@ -11,8 +9,8 @@ body {
 	font-weight: lighter;
 	line-height: $line-height-base;
 	text-align: left;
-	color: var(--black-color);
-	background-color: var(--white-color);
+	color: $color-black;
+	background-color: $color-white;
 	*{
 		box-sizing: border-box;
 		-webkit-font-smoothing: antialiased;

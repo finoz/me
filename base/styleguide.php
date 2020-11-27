@@ -11,6 +11,7 @@ include 'utils/is_localhost.php';
 <main id="main">
 	<?php include "inc/block-hero.php"; ?>
 	<section class="page-content">
+		<?php include "inc/block-naif-slider.php"; ?>
 		<?php include "inc/block-typography.php"; ?>
 	</section>
 </main>

@@ -1,6 +1,7 @@
 import utils from './utils';
 import home from './home';
 //import Animations from './animations';
+import NaifSlider from './components/naifSlider';
 import '../scss/main.scss';
 
 class Setup {
@@ -17,7 +18,13 @@ class Setup {
 		utils.toggleMenu();
 		utils.autocloseMenu();
 
+		this.initComponents();
 		this.switchPage();
+	}
+
+	initComponents() {
+		let naifSlider = new NaifSlider;
+		naifSlider.init();
 	}
 	
 	switchPage() {

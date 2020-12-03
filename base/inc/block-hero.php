@@ -7,7 +7,7 @@
 			<a href="#" class="block-cta">Miao</a>
 		</div>
 		<figure class="block-figure">
-			<img src="images/illustrations/stanley_miroodles_<?= random_int(1,4); ?>.png" alt="Blush.design random illustration - by Pablo Stanley">
+			<img src="<?= url(true) ?>/base/images/illustrations/stanley_miroodles_<?= random_int(1,4); ?>.png" alt="Blush.design random illustration - by Pablo Stanley">
 		</figure>
 	</div>
 </section>

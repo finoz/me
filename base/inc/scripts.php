@@ -1,6 +1,6 @@
 <?php
 if(BOOL_DEVELMODE && isLocalhost()) {
-	$dist_path = 'http://localhost:8080/';
+	$dist_path = DEV_URL;
 }else{
 	$dist_path = FE_URL;
 };	?>

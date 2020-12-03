@@ -1,9 +1,9 @@
+<?php if (BOOL_DEVELMODE && isLocalhost()) {
+	$dist_path = DEV_URL;
+} else {
+	$dist_path = FE_URL;
+} ?>
 <head>
-    <?php if (BOOL_DEVELMODE && isLocalhost()) {
-		$dist_path = 'http://localhost:8080/';
-	} else {
-		$dist_path = FE_URL;
-	} ?>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title><?= SITE_META_TITLE; ?></title>
@@ -31,8 +31,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-
+	
     <link rel="stylesheet" href="<?= FE_URL ?>fonts/icomoon/style.css">
     <link rel="stylesheet" href="<?= $dist_path ?>dist/main.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">

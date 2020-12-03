@@ -1,7 +1,7 @@
 <header class="header">
 	<div class="header-inner">
 		<a href="#main" class="header-brand">
-			<?php include 'images/logo.svg'; ?>
+			<?php include '../base/images/logo.svg'; ?>
 		</a>
 		<div class="header-toggle-menu" aria-hidden="true">
 			<div class="header-toggle-menu-inner"></div>

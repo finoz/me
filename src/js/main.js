@@ -1,9 +1,6 @@
-import utils from './utils';
+import utils from 'design/src/js/utils';
 import home from './home';
-//import Animations from './animations';
-import NaifSlider from './components/naifSlider';
 import '../scss/main.scss';
-
 class Setup {
 	constructor(){
 		this.log = 'Are you ready for this?';
@@ -17,16 +14,9 @@ class Setup {
 
 		utils.toggleMenu();
 		utils.autocloseMenu();
-
-		this.initComponents();
 		this.switchPage();
 	}
 
-	initComponents() {
-		let naifSlider = new NaifSlider;
-		naifSlider.init();
-	}
-	
 	switchPage() {
 		switch (document.body.dataset.page) {
 			case 'home':

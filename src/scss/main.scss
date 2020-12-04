@@ -1,0 +1,10 @@
+/**
+* non stiamo usando bootstrap. c'è troppa roba che non serve.
+* nel caso di necessità di riferimento a ocme strutturano le cose:
+* https://github.com/twbs/bootstrap/tree/v4-dev/scss
+*/
+@import "~normalize.css/normalize.css";
+
+@import "~design/src/scss/main";
+
+@import "site-home";

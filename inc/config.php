@@ -16,7 +16,7 @@ function url($justbase=false){
 }
 
 define('SITE_LANG',"IT");
-define('FE_URL', '../fe/');
+define('FE_URL', './');
 define('DEV_URL', "http://localhost:3001/");
 
 define('SITE_META_TITLE','ilfinoz');

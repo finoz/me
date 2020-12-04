@@ -1,4 +1,4 @@
-import utils from "./utils";
+import utils from 'design/src/js/utils';
 
 const home = {
 	/* global vars */

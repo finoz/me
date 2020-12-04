@@ -1,10 +1,11 @@
 <?php
-include "base/inc/config.php";
-include 'base/utils/is_localhost.php';
+include "inc/config.php";
+include 'utils/php_debug.php';
+include 'utils/is_localhost.php';
 ?>
 <!DOCTYPE html>
 <html lang="<?= SITE_LANG; ?>">
-<?php include "base/inc/head.php"; ?>
+<?php include "inc/head.php"; ?>
 <body data-page="home">
 	<div class="page">
 		<main id="main">
@@ -15,5 +16,5 @@ include 'base/utils/is_localhost.php';
 		</main>
 	</div>
 </body>
-<?php include "base/inc/scripts.php"; ?>
+<?php include "inc/scripts.php"; ?>
 </html>

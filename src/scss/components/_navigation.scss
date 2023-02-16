@@ -1,0 +1,28 @@
+@use '../helpers' as *;
+
+.page-aside {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--white);
+	width: 80vw;
+	max-width: 16rem;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	&-navigation {
+		ul {
+			list-style: none;
+			li {
+				padding: 0.5rem 0;
+				a {
+					@extend %font-primary-xs-uppercase;
+				}
+			}
+		}
+		&--utils {
+			margin-top: auto;
+		}
+	}
+}

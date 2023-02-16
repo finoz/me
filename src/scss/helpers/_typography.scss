@@ -1,0 +1,33 @@
+$font-primary: 'Inter', sans-serif;
+
+$font-size-root: 10px;
+$line-height-root: 1.5;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@extend %headings !optional;
+	font-size: $font-size-root;
+	font-weight: normal;
+	margin: 0;
+	line-height: inherit;
+}
+
+%font-base {
+	font-family: $font-primary;
+	font-weight: 400;
+	letter-spacing: 0;
+	margin: 0;
+}
+
+%font-primary-xs-uppercase {
+	@extend %font-base;
+    font-size: 0.8rem;
+	font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+

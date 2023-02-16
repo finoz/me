@@ -1,0 +1,15 @@
+@use '../helpers' as *;
+
+.page {
+	@include container($bp-desktop-xl, flex);
+	flex-direction: column;
+	text-align: center;
+	padding-bottom: 6rem;
+	&-content {
+		padding: 4vh 1.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}

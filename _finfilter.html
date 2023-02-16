@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<title>Finfilter • by Finoz</title>
+	<meta name="description" content="Filtro su elementi in pagina">
+
+	<link rel="stylesheet" href="./dist/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-page="finfilter">
+	<main class="page" id="main">
+		<section class="page-content">
+			<h1 class="page-content-title">FinFilter - Filtro su elementi in pagina</h1>
+			<form class="searchtoolbar" data-target=".item" data-targetref="title,author,abstract">
+				<input class="searchtoolbar-input" type="input" name="searchinput" id="searchinput" placeholder="Cerca">
+				<button class="searchtoolbar-reset" type="reset">✕</button>
+			</form>
+		</section>
+		<section class="page-content page-content--listing"
+			data-component="listingGenerator"
+			data-option-api="https://jsonplaceholder.typicode.com/posts"
+			data-option-itemfields="title,body"
+			data-option-itemclass="item"
+			data-option-number="16"></section>
+	</main>
+</body>
+<script src='./dist/main.js' async></script>
+
+</html>

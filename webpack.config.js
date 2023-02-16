@@ -1,94 +1,57 @@
-/* === dont forget to import scss to main.js file === */
-/* ===> import './main.scss'; <=== */
+const path = require("path");
+const WebpackBar = require("webpackbar");
+const SVGSpritemapPlugin = require("svg-spritemap-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-// ExtractTextPlugin moves all the required *.css modules in entry chunks into a separate CSS file.
-// So your styles are no longer inlined into the JS bundle.
-// But we have to import css in js file.  Just css in bundled.
-// We can use without sass, with just css-loader.
-
-// to autoprefix in webpack use postcss-loader and
-// just add 'postcss-loader' in extratplugin use and
-// create postcss.config.js, check below!
-// https://github.com/postcss/autoprefixer#webpack
-
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const webpack = require("webpack");
-const isWebpackDevServer = require('is-webpack-dev-server');
-
-const extractPlugin = new ExtractTextPlugin({
-	filename: 'main.css'
-});
-
-var imgLoader = 'url-loader';
-var imgLoaderOptions = {};
-if(!isWebpackDevServer){
-	imgLoader = 'file-loader';
-	imgLoaderOptions = {
-		emitFile: false,
-		publicPath: '../images',
-		name(file) {
-			var fileArr = file.split('/images/');
-			return fileArr[1];
-		}
-	};
-}
-
-module.exports = {
-	entry: './src/js/main.js',
-	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: 'app.js',
-		publicPath: '/dist/'
-	},
-	devServer: {
-		contentBase: '/dist/',
-		disableHostCheck: true
-	},
-	resolve: {
-		alias: {
-			'vue$': 'vue/dist/vue.esm.js'
-		},
-		extensions: ['*', '.js', '.vue', '.json']
-	},
-	module: {
-		loaders: [{
-			exclude: /node_modules/,
-			test: /\.js$/,
-			loader:  "babel"
-		}],
-		rules: [
-			{
-				test: /\.js$/,
-				use: [
-					{
-						loader: 'babel-loader',
-						options: {
-							presets: ['env']
-						}
-					}
-				]
-			},
-			{
-				test: /\.scss$/,
-				use: extractPlugin.extract({
-					use: ['css-loader', 'sass-loader']
-				})
-			},
-			{
-				test: /\.(png|jpg|gif|svg)$/i,
-				loader: imgLoader,
-				options: imgLoaderOptions,
-			}
-
-		]
-	},
-	plugins: [
-		extractPlugin,
-		new webpack.ProvidePlugin({
-			$: "jquery",
-			jQuery: "jquery"
-		})
-	]
-
+module.exports = (env, options) => {
+  return {
+    context: path.resolve(__dirname),
+    devtool: "source-map",
+    mode: options && options.mode ? options.mode : "development",
+    entry: "./src/scripts/main.js",
+    output: {
+      path: path.resolve(__dirname, "dist"),
+      filename: "main.js",
+    },
+    module: {
+      rules: [
+        {
+          test: /\.?css$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            {
+              loader: "css-loader",
+              options: {
+                sourceMap: true,
+              },
+            },
+            "resolve-url-loader",
+            {
+              loader: "sass-loader",
+              options: {
+                sourceMap: true,
+              },
+            },
+          ],
+        },
+      ],
+    },
+    resolve: {
+      alias: {
+        COMPONENTS: path.resolve(__dirname, "src/scripts/components"),
+      },
+    },
+    plugins: [
+      // sprite icone svg da folder
+      new SVGSpritemapPlugin("src/svgIcons/*.svg", {
+        output: {
+          filename: "icons-sprite.svg",
+        },
+      }),
+      new MiniCssExtractPlugin({
+        filename: "main.css",
+      }),
+      new WebpackBar(),
+    ],
+  };
 };

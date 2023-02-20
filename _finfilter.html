@@ -13,11 +13,14 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
 </head>
 
-<body data-page="finfilter">
+<body data-page="listing">
 	<main class="page" id="main">
 		<section class="page-content">
-			<h1 class="page-content-title">FinFilter - Filtro su elementi in pagina</h1>
-			<form class="searchtoolbar" data-target=".item" data-targetref="title,author,abstract">
+			<h1 class="page-content-title">Filtro su listato di elementi in pagina + listato demo</h1>
+			<form class="searchtoolbar"
+				data-component="finfilter"
+				data-option-target=".item"
+				data-option-targetref="title,body">
 				<input class="searchtoolbar-input" type="input" name="searchinput" id="searchinput" placeholder="Cerca">
 				<button class="searchtoolbar-reset" type="reset">✕</button>
 			</form>

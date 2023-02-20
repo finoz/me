@@ -1,21 +1,13 @@
-class Finfilter {
-  constructor() {
+import Base from "./_base";
+export default class Finfilter extends Base {
+  constructor(el) {
+    super(el);
     this.log = "Start finoz/finfilter";
-    this.toolbar = document.querySelector(".searchtoolbar");
-    if (!this.toolbar) {
-      throw new Error("No search toolbar found");
-    }
-    this.input = this.toolbar.querySelector(".searchtoolbar-input");
-    this.reset = this.toolbar.querySelector(".searchtoolbar-reset");
+    this.input = this.$el.querySelector("input");
+    this.reset = this.$el.querySelector('button[type="reset"]');
     this.styleId = "finfilter";
-    if (!this.input || !this.reset) {
-      throw new Error("No search input found");
-    }
-    this.target = this.toolbar.getAttribute("data-target");
-    this.refs = this.toolbar
-      .getAttribute("data-targetref")
-      .split(",")
-      .map((ref) => "data-" + ref);
+    this.refs = this.$options.targetref.split(",").map((ref) => "data-" + ref);
+    this.init();
   }
 
   init() {
@@ -32,7 +24,7 @@ class Finfilter {
           filterstyle = "";
         } else {
           let string = e.target.value.toLowerCase();
-          filterstyle = this.target;
+          filterstyle = this.$options.target;
           this.refs.forEach((ref) => {
             filterstyle += `:not([${ref}*="${string}"])`;
           });
@@ -53,4 +45,3 @@ class Finfilter {
     document.body.appendChild(style);
   }
 }
-export default Finfilter;

@@ -1,11 +1,10 @@
 import Base from "./_base";
-class ListingGenerator extends Base {
+export default class ListingGenerator extends Base {
   constructor(el) {
     super(el);
     this.log = "Start finoz/listingGenerator";
-    this.init();
-
     this.data = {};
+    this.init();
   }
 
   async init() {
@@ -31,7 +30,6 @@ class ListingGenerator extends Base {
   render() {
     this.data.forEach((item) => {
       let mkp = this.buildItem(item);
-      console.log(mkp);
       this.$el.insertAdjacentHTML("beforeend", mkp);
     });
   }
@@ -58,5 +56,3 @@ class ListingGenerator extends Base {
     return markup;
   }
 }
-
-export default ListingGenerator;

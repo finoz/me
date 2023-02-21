@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<title>Listing + Finfilter • by Finoz</title>
+	<meta name="description" content="Filtro su elementi in pagina">
+
+	<link rel="stylesheet" href="./dist/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-page="listingpage">
+	<div class="page">
+		<main class="page-main" id="main">
+			<section class="page-content page-content--heading">
+				<h1 class="page-title">Filtro su listato di elementi in pagina + listato demo</h1>
+				<a class="page-subtitle" href="./">back to home</a>
+			</section>
+			<section class="page-content">
+				<form class="searchtoolbar"
+					data-component="finfilter"
+					data-option-target=".item"
+					data-option-targetref="title,body">
+					<input class="searchtoolbar-input" type="input" name="searchinput" id="searchinput" placeholder="Cerca">
+					<button class="searchtoolbar-reset" type="reset">✕</button>
+				</form>
+			</section>
+			<section class="page-content page-content--listing"
+				data-component="listingGenerator"
+				data-option-api="https://jsonplaceholder.typicode.com/posts"
+				data-option-itemfields="title,body"
+				data-option-itemclass="item"
+				data-option-number="16"></section>
+		</main>
+	</div>
+</body>
+<script src='./dist/main.js' async></script>
+
+</html>

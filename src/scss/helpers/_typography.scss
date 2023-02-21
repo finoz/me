@@ -42,3 +42,10 @@ h6 {
     font-size: 1.2rem;
 	font-weight: 700;
 }
+
+
+%font-primary-l {
+	@extend %font-base;
+    font-size: 1.6rem;
+	font-weight: 700;
+}

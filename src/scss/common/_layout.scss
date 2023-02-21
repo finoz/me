@@ -4,12 +4,32 @@
 	@include container($bp-desktop-xl, flex);
 	flex-direction: column;
 	text-align: center;
-	padding-bottom: 6rem;
+    min-height: 100vh;
+	&-main {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+	}
+	&-footer {
+		padding: 2rem;
+		border-top: 1px solid var(--prj-color-border);
+	}
 	&-content {
 		padding: 4vh 1.5rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		&--heading {
+			> *:not(:first-child) {
+				margin-top: 1em;
+			} 
+		}
+	}
+	&-title {
+		@extend %font-primary-l;
+	}
+	&-subtitle {
+		@extend %font-primary-xs-uppercase;
 	}
 }

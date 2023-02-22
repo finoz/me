@@ -1,0 +1,23 @@
+@use './typography' as *;
+
+$cta-height: 4.2rem;
+
+%cta-reset {
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  border: 0 none;
+  border-radius: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+%cta-base {
+  @extend %cta-reset;
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  @extend %font-primary-xs-uppercase;
+}

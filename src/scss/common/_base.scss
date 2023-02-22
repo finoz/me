@@ -64,3 +64,9 @@ a:visited {
 button {
   background: none;
 }
+
+//
+
+.cta {
+  @extend %cta-base;
+}

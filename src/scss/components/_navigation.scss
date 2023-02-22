@@ -1,21 +1,44 @@
 @use '../helpers' as *;
 
 .page-navigation {
-	& + & {
-		&::before {
-			content: "•";
+	@include breakpoint('tablet-portrait') {
+		& + & {
+			&::before {
+				content: "•";
+			}
 		}
 	}
 	ul {
 		list-style: none;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
 		li {
 			padding: 0.5rem 0;
 			a {
 				@extend %font-primary-xs-uppercase;
+				white-space: nowrap;
 			}
 		}
 	}
 	&--utils {
 		margin-top: auto;
+	}
+}
+
+.page-footer {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	justify-content: start;
+	align-items: center;
+	overflow-x: auto;
+	@include breakpoint('tablet-portrait') {
+		justify-content: center;
+		flex-direction: column;
+		overflow-x: unset;
+		gap: 0;
 	}
 }

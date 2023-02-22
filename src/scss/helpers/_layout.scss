@@ -1,5 +1,6 @@
-@use 'colors' as *;
-@use 'colors' as *;
+:root {
+  --full-vh: 100vh;
+}
 
 @mixin container($max-width, $display: block) {
   position: relative;

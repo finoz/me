@@ -4,7 +4,7 @@
 	@include container($bp-desktop-xl, flex);
 	flex-direction: column;
 	text-align: center;
-    min-height: 100vh;
+    min-height: var(--full-vh);
 	&-main {
 		flex-grow: 1;
 		display: flex;

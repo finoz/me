@@ -1,4 +1,4 @@
-const carouselUtils = {
+export default {
   setSwiperMarkup: ({ $el, hasArrows = true, hasBullets = true }) => {
     if (!$el) {
       throw "setSwiperMarkup requires an element";
@@ -24,5 +24,3 @@ const carouselUtils = {
     }
   },
 };
-
-export default carouselUtils;

@@ -1,4 +1,5 @@
 import "../scss/main.scss";
+import viewportUtils from "./utils/viewportUtils";
 import "what-input";
 
 class Setup {
@@ -23,6 +24,8 @@ class Setup {
   init() {
     console.log(this.log);
     this.listenForComponents();
+    viewportUtils.setDocumentHeight();
+    window.addEventListener("resize", viewportUtils.setDocumentHeight);
   }
 }
 

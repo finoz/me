@@ -1,7 +1,8 @@
 $font-primary: 'Inter', sans-serif;
 
-$font-size-root: 10px;
-$line-height-root: 1.5;
+:root {
+	--font-size-root: 10px;	
+}
 
 h1,
 h2,
@@ -10,7 +11,7 @@ h4,
 h5,
 h6 {
 	@extend %headings !optional;
-	font-size: $font-size-root;
+	font-size: var(--font-size-root);
 	font-weight: normal;
 	margin: 0;
 	line-height: inherit;
@@ -25,13 +26,13 @@ h6 {
 
 %font-primary-xs {
 	@extend %font-base;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
 	font-weight: 400;
 }
 
 %font-primary-xs-uppercase {
 	@extend %font-base;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
 	font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -39,13 +40,12 @@ h6 {
 
 %font-primary-m {
 	@extend %font-base;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 	font-weight: 700;
 }
 
-
 %font-primary-l {
 	@extend %font-base;
-    font-size: 1.6rem;
+    font-size: 3rem;
 	font-weight: 700;
 }

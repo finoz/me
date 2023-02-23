@@ -1,11 +1,11 @@
 @use '../helpers' as *;
 
 html {
+  font-size: var(--font-size-root);
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth; /* Supported by firefox and Chrome only. Use a fallback for unsupported browsers, if you need. */
   overflow-x: hidden;
-  height: -webkit-fill-available;
   *,
   *::before,
   *::after {

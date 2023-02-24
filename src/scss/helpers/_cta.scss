@@ -1,8 +1,6 @@
 @use './typography' as *;
 
-:root {
-  --cta-height: 3.2rem;
-}
+$cta-height: 4.2rem;
 
 %cta-reset {
   margin: 0;
@@ -22,10 +20,4 @@
   display: flex;
   gap: 0.5rem;
   @extend %font-primary-xs-uppercase;
-}
-
-%cta-base-btn {
-  @extend %cta-base;
-  padding: 0.8rem 1.6rem;
-  height: var(--cta-height);
 }

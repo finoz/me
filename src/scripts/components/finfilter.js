@@ -4,6 +4,7 @@ export default class Finfilter extends Base {
     super(el);
     this.log = "Start finoz/finfilter";
     this.input = this.$el.querySelector("input");
+    this.reset = this.$el.querySelector('button[type="reset"]');
     this.styleId = "finfilter";
     this.refs = this.$options.targetref.split(",").map((ref) => "data-" + ref);
     this.init();
@@ -29,10 +30,11 @@ export default class Finfilter extends Base {
           });
           filterstyle += "{display:none;}";
         }
+        console.log(filterstyle);
         style.innerHTML = filterstyle;
       });
     }
-    this.$el.addEventListener("reset", (e) => {
+    this.toolbar.addEventListener("reset", (e) => {
       style.innerHTML = "";
     });
   }

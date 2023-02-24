@@ -1,5 +1,3 @@
-@use '../helpers' as *;
-
 .searchtoolbar {
 	display: flex;
 	flex-direction: row;
@@ -17,6 +15,10 @@
 		font-size: 1.2rem;
 	}
 	&-reset {
-		@extend %cta-base-btn;
+		color: inherit;
+		border: 0 none;
+		background: none;
+		outline: 0 none;
+		padding: 0;
 	}
 }

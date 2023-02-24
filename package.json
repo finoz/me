@@ -25,7 +25,6 @@
 		"query-string": "8.1.0",
 		"swiper": "^8.0.6",
 		"tippy.js": "^6.3.7",
-		"what-input": "5.2.10",
-		"@notionhq/client": "^2.2.3"
+		"what-input": "5.2.10"
 	}
 }

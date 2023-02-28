@@ -1,6 +1,6 @@
 {
 	"name": "finoz.me",
-	"version": "1.1.1",
+	"version": "1.1.0",
 	"scripts": {
 		"start": "npm run server:init & npm run webpack:watch",
 		"server:init": "node server.js",

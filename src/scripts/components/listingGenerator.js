@@ -4,7 +4,12 @@ export default class ListingGenerator extends Base {
     super(el);
     this.log = "Start finoz/listingGenerator";
     this.data = {};
+    this.api = this.setApi();
     this.init();
+  }
+
+  setApi() {
+    return this.$options.api;
   }
 
   async init() {
@@ -14,7 +19,7 @@ export default class ListingGenerator extends Base {
   }
 
   async getData() {
-    return await fetch(this.$options.api).then((response) => response.json());
+    return await fetch(this.api).then((response) => response.json());
   }
 
   setData() {
@@ -43,7 +48,9 @@ export default class ListingGenerator extends Base {
     markup += `<article`;
     fields.forEach((field) => {
       if (data[field]) {
-        markup += ` data-${field}="${data[field]}"`;
+        let str = data[field];
+        str = str.toString().toLowerCase();
+        markup += ` data-${field}="${str}"`;
       }
     });
     markup += ` class="${itemclass}">`;

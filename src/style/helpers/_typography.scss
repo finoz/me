@@ -1,0 +1,68 @@
+@use 'breakpoints' as *;
+
+:root {
+    --font-size-root: 10px;
+    --font-family-primary: 'Space Grotesk', sans-serif;
+    --font-family-accent: 'Inknut Antiqua', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend %headings !optional;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    line-height: inherit;
+}
+
+%font-base {
+    font-family: var(--font-family-primary);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    margin: 0;
+}
+
+%font-primary-s {
+    @extend %font-base;
+    font-size: 1.4rem;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+/* cta */
+%font-primary-m-uppercase {
+    @extend %font-base;
+    font-size: 1.6rem;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    @include breakpoint(tablet-landscape) {
+        font-size: 2rem;
+    }
+}
+
+%font-primary-l {
+    @extend %font-base;
+    font-size: 3rem;
+    line-height: 1.5;
+    @include breakpoint(tablet-landscape) {
+        font-size: 3.6rem;
+    }
+}
+
+%font-primary-huge {
+    @extend %font-base;
+    font-family: var(--font-family-accent);
+    font-size: 6rem;
+    line-height: 1;
+    @include breakpoint(tablet-landscape) {
+        font-size: 12rem;
+    }
+}

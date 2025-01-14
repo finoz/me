@@ -1,0 +1,29 @@
+@use 'sass:math';
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'breakpoints' as *;
+
+%cta-reset {
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    border: 0 none;
+    border-radius: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+%cta-inline {
+    @extend %cta-reset;
+    @extend %font-primary-m-uppercase;
+    display: flex;
+    position: relative;
+    width: auto;
+    transition: all 0.3s ease-in-out;
+    &:hover:not(:focus) {
+        text-decoration: none;
+        color: var(--color-secondary);
+    }
+}

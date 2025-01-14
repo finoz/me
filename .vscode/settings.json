@@ -1,62 +1,24 @@
 {
-    // JS FORMATTER
-    "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.formatOnSave": true,
-    },
-    // HTML FORMATTER
-    "[xml]": {
-      "editor.defaultFormatter": "redhat.vscode-xml",
-      "editor.tabSize" :4
-    },
-    "[json]": {
-      "editor.formatOnSave": true
-    },
-    "[scss]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.formatOnSave": true
-    },
-    // HTML FORMATTER
-    "html.format.wrapLineLength": 500,
-    "html.format.wrapAttributes": "preserve",
-    // CSS FORMATTER
-    "css.lint.duplicateProperties": "error",
-    "css.lint.emptyRules": "error",
-    "css.lint.float": "error",
-    "css.lint.important": "warning",
-    "css.lint.zeroUnits": "error",
-    "scss.lint.emptyRules": "error",
-    "scss.lint.universalSelector": "warning",
-    "scss.lint.unknownAtRules": "ignore",
-    "workbench.colorCustomizations": {
-      "activityBar.background": "#479F7A",
-      "titleBar.activeBackground": "#6601017a",
-      "titleBar.activeForeground": "#FFFFFF",
-      "activityBar.activeBackground": "#479F7A",
-      "activityBar.activeBorder": "#000000",
-      "activityBar.foreground": "#FFFFFF",
-      "activityBar.inactiveForeground": "#FFFFFF99",
-      "activityBarBadge.background": "#000000",
-      "activityBarBadge.foreground": "#FFFFFF",
-      "statusBar.background": "#6601017a",
-      "statusBar.foreground": "#FFFFFF",
-      "statusBarItem.hoverBackground": "#479F7A",
-      "titleBar.inactiveBackground": "#66010199",
-      "titleBar.inactiveForeground": "#FFFFFF99",
-      "sash.hoverBorder": "#479F7A",
-      "statusBarItem.remoteBackground": "#6601017a",
-      "statusBarItem.remoteForeground": "#FFFFFF"
-    },
-    // EDITOR
-    "editor.tabSize": 4,
-    "editor.insertSpaces": false,
-    "editor.formatOnSave": true,
-    "editor.detectIndentation": true,
-    "editor.snippetSuggestions": "bottom",
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 240,
-    "diffEditor.wordWrap": "on",
-  	"html.suggest.html5": true,
-    "editor.bracketPairColorization.enabled": true,
-    
+	"workbench.colorCustomizations": {
+		"terminal.background": "#2C3E50",
+		"terminal.foreground": "#E0E0E0",
+		"terminalCursor.background": "#E0E0E0",
+		"terminalCursor.foreground": "#E0E0E0",
+		"terminal.ansiBlack": "#2C3E50",
+		"terminal.ansiBlue": "#3498DB",
+		"terminal.ansiBrightBlack": "#95A5A6",
+		"terminal.ansiBrightBlue": "#3498DB",
+		"terminal.ansiBrightCyan": "#1ABC9C",
+		"terminal.ansiBrightGreen": "#2ECC71",
+		"terminal.ansiBrightMagenta": "#9B59B6",
+		"terminal.ansiBrightRed": "#E74C3C",
+		"terminal.ansiBrightWhite": "#ECF0F1",
+		"terminal.ansiBrightYellow": "#F1C40F",
+		"terminal.ansiCyan": "#1ABC9C",
+		"terminal.ansiGreen": "#2ECC71",
+		"terminal.ansiMagenta": "#9B59B6",
+		"terminal.ansiRed": "#E74C3C",
+		"terminal.ansiWhite": "#E0E0E0",
+		"terminal.ansiYellow": "#F1C40F"
+	}
 }

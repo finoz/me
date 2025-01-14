@@ -1,19 +1,24 @@
-# ignore all /dist
-dist/*
-
-# ignore node dependency directories
-node_modules/
-
-# ignore log files and databases
+# Logs
+logs
 *.log
-*.sql
-*.sqlite
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# ignore some editor settings
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
 .vscode/*
-!.vscode/settings.json
 !.vscode/extensions.json
-
-# ignore 💩 files
-.DS_store
-.htaccess
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,57 @@
+@use '/node_modules/modern-normalize/modern-normalize.css';
+@use 'helpers' as *;
+@use 'common';
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    background-image: linear-gradient(70deg, var(--color-primary), var(--color-secondary));
+    height: 100dvh;
+}
+
+.main {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+    gap: 4rem;
+    will-change: background-image;
+    transition: background-image 0.8s ease-out;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    @include breakpoint(tablet-landscape) {
+        padding: 8rem;
+    }
+    .title {
+        @extend %font-primary-huge;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: opacity 0.15 ease-in-out;
+        @include breakpoint(tablet-landscape) {
+            flex-direction: row;
+        }
+    }
+    .navigation {
+        ul {
+            display: flex;
+            flex-direction: row;
+            li {
+                display: inline-block;
+                a {
+                    @extend %cta-inline;
+                }
+            }
+        }
+    }
+}

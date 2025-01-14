@@ -31,15 +31,18 @@ body {
         padding: 8rem;
     }
     .title {
-        @extend %font-primary-huge;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        cursor: pointer;
-        opacity: 0.5;
-        transition: opacity 0.15 ease-in-out;
-        @include breakpoint(tablet-landscape) {
-            flex-direction: row;
+        .mailtrigger {
+            @extend %cta-reset;
+            @extend %font-primary-huge;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.15 ease-in-out;
+            @include breakpoint(tablet-landscape) {
+                flex-direction: row;
+            }
         }
     }
     .navigation {

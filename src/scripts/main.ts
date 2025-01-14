@@ -1,12 +1,12 @@
 import "../style/main.scss";
 
 const initLp = () => {
-  const mailstring = document.querySelector(".title") as HTMLElement;
+  const mailtrigger = document.querySelector(".mailtrigger") as HTMLElement;
   const mailsubject = "Richiesta di collaborazione";
   const mailbody = "Ciao, sono [XXX] e sto cercando un partner per un progetto di [YYY]. Cosa ne pensi? Se sei interessato, contattami al più presto. Grazie!";
   
   const clickToSend = function() {
-    mailstring?.addEventListener("click", () => {
+    mailtrigger?.addEventListener("click", () => {
       //open email
       window.open(`mailto:hello@finoz.it?subject=${encodeURI(mailsubject)}&body=${encodeURI(mailbody)}`, "_blank", );
     });
@@ -53,8 +53,8 @@ const initLp = () => {
   const changeMoving = function() {
     window.addEventListener('mousemove', (e) => {
       const scale = mouseScaleListener(e);
-      if (mailstring && mailstring as HTMLElement) {
-        mailstring.style.opacity = `${scale}`;
+      if (mailtrigger && mailtrigger as HTMLElement) {
+        mailtrigger.style.opacity = `${scale}`;
       }
     });
   }

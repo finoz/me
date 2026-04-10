@@ -46,12 +46,16 @@ body {
         }
     }
     .navigation {
+        margin-right: auto;
+        @include breakpoint(tablet-portrait) {
+            margin-right: 0;
+        }
         ul {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             gap: 2rem;
             @include breakpoint(tablet-portrait) {
-                flex-direction: column;
+                flex-direction: row;
             }
             li {
                 display: inline-block;

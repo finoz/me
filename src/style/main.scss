@@ -49,6 +49,10 @@ body {
         ul {
             display: flex;
             flex-direction: row;
+            gap: 2rem;
+            @include breakpoint(tablet-portrait) {
+                flex-direction: column;
+            }
             li {
                 display: inline-block;
                 a {
